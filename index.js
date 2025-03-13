@@ -6,11 +6,9 @@ const faturamento = {
     "Outros": 19849.53
 };
 
-// Calcula o faturamento total
-const faturamentoTotal = Object.values(faturamento).reduce((acc, valor) => acc + valor, 0);
 
-// Calcula e exibe os percentuais
-console.log("Percentual de Representação por Estado:");
+const faturamentoTotal = Object.values(faturamento).reduce((acc, valor) => acc + valor, 0);
+console.log("Dados percentual por estado:");
 for (const estado in faturamento) {
     const percentual = (faturamento[estado] / faturamentoTotal) * 100;
     console.log(`${estado}: ${percentual.toFixed(2)}%`);
